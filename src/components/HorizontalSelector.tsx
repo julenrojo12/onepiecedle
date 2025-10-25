@@ -158,19 +158,19 @@ export default function HorizontalSelector({ onSubmit }: { onSubmit?: (value: nu
         </div>
         
         {/* ⬅️➡️ Botones de salto */}
-        <div className="flex items-center gap-8 mb-6">
-          <button type="button" onClick={moveLeft50} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">−50</button>
-          <button type="button" onClick={moveLeft10} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">−10</button>
-          <button type="button" onClick={moveLeft1} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">−1</button>
-          <span className="font-bold text-white text-lg">Chapter: {value}</span>
-          <button type="button" onClick={moveRight1} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">+1</button>
-          <button type="button" onClick={moveRight10} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">+10</button>
-          <button type="button" onClick={moveRight50} className="px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition text-white font-bold text-lg shadow-md">+50</button>
+        <div className="flex flex-wrap items-center gap-4 md:gap-8 mb-6 justify-center mt-6">
+          <button type="button" onClick={moveLeft50} className="hidden md:inline-flex px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">◁◁◁</button>
+          <button type="button" onClick={moveLeft10} className="px-1 md:px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">◁◁</button>
+          <button type="button" onClick={moveLeft1} className="px-1 md:px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">◁</button>
+          <span className="font-bold text-white text-base md:text-lg text-center min-w-[120px]">Chapter: {value}</span>
+          <button type="button" onClick={moveRight1} className="px-1 md:px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">▷</button>
+          <button type="button" onClick={moveRight10} className="px-1 md:px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">▷▷</button>
+          <button type="button" onClick={moveRight50} className="hidden md:inline-flex px-2 py-1 rounded-full bg-white/20 hover:bg-white/40 transition text-white font-bold text-lg shadow-md border border-white">▷▷▷</button>
         </div>
 
         <button
           type="submit"
-          className="px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg shadow-md transition"
+          className="px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg shadow-md transition border border-white"
         >
           Let’s see!
         </button>

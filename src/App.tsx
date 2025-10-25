@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/Home";
 import Chapter from "./pages/Chapter";
@@ -11,12 +11,10 @@ function App() {
   return (
     //Envuelve toda la app con el proveedor de React Query
     <QueryClientProvider client={queryClient}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chapter" element={<Chapter />} /> 
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chapter" element={<Chapter />} /> 
+      </Routes>
     </QueryClientProvider>
   );
 }
